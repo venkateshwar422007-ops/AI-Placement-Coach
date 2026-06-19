@@ -1,0 +1,26 @@
+{
+    "Software Engineer": [
+      "python",
+      "sql",
+      "git",
+      "data structures",
+      "algorithms"
+    ],
+  
+    "Data Analyst": [
+      "excel",
+      "sql",
+      "power bi",
+      "python",
+      "statistics"
+    ],
+  
+    "ML Engineer": [
+      "python",
+      "machine learning",
+      "tensorflow",
+      "pandas",
+      "numpy"
+    ]
+  }
+  

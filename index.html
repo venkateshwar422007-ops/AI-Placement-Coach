@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Placement Coach</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 AI Placement Coach</h1>
+
+<div class="card">
+
+<h2>Upload Resume</h2>
+
+<form method="POST"
+      enctype="multipart/form-data">
+
+    <input type="file"
+           name="resume"
+           required>
+
+    <br><br>
+
+    <button type="submit">
+        Analyze Resume
+    </button>
+
+</form>
+
+</div>
+
+{% if best_role %}
+
+<div class="card">
+
+<h2>Recommended Role</h2>
+
+<p class="role">{{ best_role }}</p>
+
+<p class="badge">
+Career Match: Strong
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Placement Readiness</h2>
+
+<div class="progress">
+
+<div class="progress-fill"
+     style="width: {{ best_score }}%;">
+
+{{ best_score }}%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Detected Skills</h2>
+
+<ul>
+{% for skill in skills %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Missing Skills</h2>
+
+<ul>
+{% for skill in missing_skills %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Learning Roadmap</h2>
+
+<ol>
+{% for skill in missing_skills %}
+<li>Learn {{ skill }}</li>
+{% endfor %}
+</ol>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
