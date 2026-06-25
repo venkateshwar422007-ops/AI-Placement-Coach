@@ -5,7 +5,10 @@ import os
 from utils.parser import extract_text
 from utils.skills import extract_skills
 from utils.scorer import calculate_score
+<<<<<<< HEAD
 from charts import generate_chart
+=======
+>>>>>>> 93613978f7a65d274b73b143a4a7f0bf210434c4
 
 app = Flask(__name__)
 
@@ -64,9 +67,12 @@ def home():
                         set(role_skills) - set(user_skills)
                     )
 
+<<<<<<< HEAD
             # Generate chart
             generate_chart(role_scores)
 
+=======
+>>>>>>> 93613978f7a65d274b73b143a4a7f0bf210434c4
     return render_template(
         "index.html",
         best_role=best_role,
@@ -78,4 +84,8 @@ def home():
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True, port=5001)
+=======
+    app.run(debug=True)
+>>>>>>> 93613978f7a65d274b73b143a4a7f0bf210434c4
