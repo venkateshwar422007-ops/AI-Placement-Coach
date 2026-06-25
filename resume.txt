@@ -1,0 +1,8 @@
+Name: Venkateshwar Reddy
+
+Skills:
+Python
+SQL
+Machine Learning
+Pandas
+NumPy
